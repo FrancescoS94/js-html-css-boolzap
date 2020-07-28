@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: gray;
+  background-color: #00bea4;
+  background-image: linear-gradient(#00bea4, #d3dad8, #c6cfcc);
   font-family: 'Rubik', sans-serif;
 }
 
 section {
-    background-color: aqua;
     height: 90vh;
     width: 80%;
     margin: 5vh auto;
@@ -18,13 +18,13 @@ section {
 
 /* ASIDE */
 aside {
-    background-color: blue;
     height: 100%;
     width: 30%;
     float: left;
 }
 
-.fa {
+aside .fa,
+.main-1 .fa {
     font-size: 20px;
     color: rgb(169,169,169);
     margin-right: 15px;
@@ -34,7 +34,8 @@ aside {
 .aside-1 {
     height: 70px;;
     width: 100%;
-    background-color: rgb(220, 220, 220);
+    background-color: #f0f0f0;
+    border-right: 1px solid rgb(169,169,169);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +61,7 @@ img {
     align-items: center;
 }
 
-.aside-2 i {
+.aside-2 a i {
     padding: 15px;
     border-radius: 50%;
     background-color: white;
@@ -68,27 +69,32 @@ img {
     margin-left: 20px;
 }
 
+#notifiche {
+    color: gray;
+    text-decoration: underline;
+}
+
 /* ASIDE - 3 */
 .aside-3 {
     height: 45px;
     width: 100%;
-    background-color: rgb(220, 220, 220);
+    background-color: #f0f0f0;
     display: flex;
     align-items: center;
 }
 
-.f-1 {
-    width: 20%;
-    padding-left: 5px;
+.aside-p3 {
+    flex-basis: 16%;
+    padding-left: 6px;
 }
 
-.f-2 {
-    width: 100%;
-    padding-right: 5px;
+.aside-p4 {
+    flex-basis: 94%;
+    padding-right: 6px;
 }
 
 .aside-3 button {
-    height: 25px;
+    height: 30px;
     background-color: white;
     border: none;
     cursor: pointer;
@@ -100,23 +106,23 @@ button i {
 
 
 .aside-3 input {
-    height: 25px;
+    height: 30px;
     width: 100%;
     border: none;
+    padding: 0 10px;
 }
 
 /* ASIDE - 4 */
 .aside-4 {
     height: calc(100% - 185px);
     width: 100%;
-    background-color: brown;
     overflow-y: scroll;
 }
 
 .aside-p1 {
     height: 70px;
     width: 100%;
-    background-color: blue;
+    background-color: white;
     display: flex;
     align-items: center;
     border: 1px solid black;
@@ -127,9 +133,12 @@ button i {
     align-items: center;
 }
 
+.p1-child-1 {
+    display: flex;
+}
+
 /* MAIN */
 main {
-    background-color: yellow;
     height: 100%;
     width: 70%;
     float: left;
@@ -139,7 +148,7 @@ main {
 .main-1 {
     height: 70px;;
     width: 100%;
-    background-color: pink;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,7 +163,7 @@ main {
 .main-2 {
     height: calc(100% - 140px);
     width: 100%;
-    background-color: green;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fuser-images.githubusercontent.com%2F15075759%2F28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png&f=1&nofb=1);
     overflow-y: scroll;
 }
 
@@ -162,16 +171,32 @@ main {
 .main-3 {
     height: 70px;;
     width: 100%;
-    background-color: tomato;
+    background-color: #f0f0f0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
+.main-3 .fa {
+    font-size: 25px;
+    color: #696969;
+}
+
 .main-3 input {
     height: 35px;
-    width: 70%;
+    width: 100%;
     border: none;
     border-radius: 5px;
+    padding: 0 10px;
+}
+
+.m-p3 {
+    display: flex;
+    justify-content: center;
+    flex-basis: 10%;
+
+}
+
+.m-p4 {
+flex-basis: 80%;
 }
