@@ -3,3 +3,105 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+  background-color: gray;
+}
+
+section {
+    background-color: aqua;
+    height: 90vh;
+    width: 80%;
+    margin: 5vh auto;
+}
+
+/* ASIDE */
+aside {
+    background-color: blue;
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+
+.aside-1 {
+    height: 70px;;
+    width: 100%;
+    background-color: #DCDCDC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 55px;
+    border-radius: 50%;
+}
+
+.aside-2 {
+    height: 70px;;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.aside-3 {
+    height: 45px;
+    width: 100%;
+    background-color: white;
+}
+
+.aside-4 {
+    height: calc(100% - 185px);
+    width: 100%;
+    background-color: brown;
+    overflow-y: scroll;
+}
+
+.aside-p1 {
+    height: 70px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+/* MAIN */
+main {
+    background-color: yellow;
+    height: 100%;
+    width: 70%;
+    float: left;
+}
+
+.main-1 {
+    height: 70px;;
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-2 {
+    height: calc(100% - 140px);
+    width: 100%;
+    background-color: green;
+    overflow-y: scroll;
+}
+
+.main-3 {
+    height: 70px;;
+    width: 100%;
+    background-color: tomato;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-3 input {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
