@@ -42,7 +42,7 @@ aside .fa,
 }
 
 img {
-    height: 55px;
+    width: 55px;
     border-radius: 50%;
     margin: 0 20px;
 }
@@ -72,6 +72,7 @@ img {
 #notifiche {
     color: gray;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 /* ASIDE - 3 */
@@ -125,16 +126,20 @@ button i {
     background-color: white;
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    padding-right: 10px;
 }
 
-.p1-child {
-    display: flex;
-    align-items: center;
+.a-p1-child {
+    width: calc(100% - 95px);
 }
 
-.p1-child-1 {
+.a-p1-child-1 {
     display: flex;
+    justify-content: space-between;
+}
+
+small, time {
+    color: gray;
 }
 
 /* MAIN */
@@ -163,8 +168,36 @@ main {
 .main-2 {
     height: calc(100% - 140px);
     width: 100%;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fuser-images.githubusercontent.com%2F15075759%2F28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png&f=1&nofb=1);
+    background-image: url("../img/mine.jpg");
     overflow-y: scroll;
+}
+
+.message {
+    max-width: 30%;
+    min-width: 20%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sent {
+    background-color: #dcf8c6;
+    float: right;
+    clear: both;
+}
+
+.received {
+    background-color: white;
+    float: left;
+    clear: both;
+}
+
+.msg-bottom {
+    text-align: right;
+}
+
+.template {
+    display: none;
 }
 
 /* MAIN - 3 */
@@ -183,7 +216,7 @@ main {
 }
 
 .main-3 input {
-    height: 35px;
+    height: 45px;
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -194,7 +227,6 @@ main {
     display: flex;
     justify-content: center;
     flex-basis: 10%;
-
 }
 
 .m-p4 {
