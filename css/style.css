@@ -129,6 +129,11 @@ button i {
     padding-right: 10px;
 }
 
+.aside-p1:hover,
+.aside-p1.active {
+    background-color: #f0f0f0;
+}
+
 .a-p1-child {
     width: calc(100% - 95px);
 }
@@ -194,10 +199,6 @@ main {
 
 .msg-bottom {
     text-align: right;
-}
-
-.template {
-    display: none;
 }
 
 /* MAIN - 3 */
