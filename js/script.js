@@ -29,7 +29,7 @@ function rispostaAutomatica() {
     // Aggiungo la classe.
     msg2.addClass("received");
     // Aggiungo il testo.
-    msg2.find(".msg-text").append("ok");
+    msg2.find(".msg-text").append("Ok");
     msg2.find(".msg-time").append(myTimer());
     // Mettere l'elemento nel DOM.
     $(".chat").append(msg2);
@@ -42,3 +42,10 @@ function myTimer() {
     var m = d.getMinutes();
     return h + ":" + m;
 }
+
+// Funzione per aggiungere l'active all'elemento selezionato.
+
+$(".aside-p1").click(function() {
+    $(".aside-p1").removeClass("active");
+    $(this).addClass('active');
+});
