@@ -62,8 +62,22 @@ $(".aside-p1").click(function() {
     $(".main-1").find("img").attr("src", img);
     $(".main-1").find(".m-p1 h4").text(name);
     // Trovo la posizione.
-    var posizione = $(this).index();
+    var position = $(this).index();
     // Rimuovo la classe active e la riaggiungo nella nuova posizione.
     $(".main-2").removeClass("active");
-    $(".main-2").eq(posizione).addClass("active");
+    $(".main-2").eq(position).addClass("active");
+});
+
+// Funzione per ricercare i contatti nella lista chat.
+$("#search").keyup(function() {
+    var testo = $("#search").val();
+    $(".aside-p1").each(function() {
+    var name = $(this).find("h4").text().toLowerCase();
+
+    if (name.includes(testo)) {
+        $(this).show();
+    } else {
+        $(this).hide();
+    }
+    });
 });
