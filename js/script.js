@@ -16,10 +16,10 @@ function addElement() {
     msg.find(".msg-text").append(valore);
     msg.find(".msg-time").append(myTimer());
     // Inserimento nel Dom.
-    $(".chat").append(msg);
+    $(".main-2.active").append(msg);
     $("#add-text").val("");
     // Risposta automatica.
-    setTimeout(rispostaAutomatica, 2000);
+    setTimeout(rispostaAutomatica, 1000);
 }
 
 // Funzione messaggio di risposta automatica.
@@ -32,20 +32,38 @@ function rispostaAutomatica() {
     msg2.find(".msg-text").append("Ok");
     msg2.find(".msg-time").append(myTimer());
     // Mettere l'elemento nel DOM.
-    $(".chat").append(msg2);
+    $(".main-2.active").append(msg2);
 }
 
 // Ore e Minuti.
 function myTimer() {
     var d = new Date();
-    var h = d.getHours();
-    var m = d.getMinutes();
+    var h = addZero(d.getHours());
+    var m = addZero(d.getMinutes());
     return h + ":" + m;
 }
 
-// Funzione per aggiungere l'active all'elemento selezionato.
+// Funzione per aggiungere lo 0 alle ore ed ai minuti.
+function addZero(numero) {
+    if (numero < 10) {
+        return "0" + numero;
+    }
+    return numero;
+}
 
+// Funzione per aggiungere l'active all'elemento selezionato.
 $(".aside-p1").click(function() {
     $(".aside-p1").removeClass("active");
     $(this).addClass('active');
+    // Inserisco nella variabile il contenuto di img e h4.
+    var img = $(this).find("img").attr("src");
+    var name = $(this).find(".a-p1-child-1 h4").text();
+    // Copio il contenuto della variabile nel mio main.
+    $(".main-1").find("img").attr("src", img);
+    $(".main-1").find(".m-p1 h4").text(name);
+    // Trovo la posizione.
+    var posizione = $(this).index();
+    // Rimuovo la classe active e la riaggiungo nella nuova posizione.
+    $(".main-2").removeClass("active");
+    $(".main-2").eq(posizione).addClass("active");
 });

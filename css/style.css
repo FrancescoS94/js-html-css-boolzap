@@ -175,6 +175,11 @@ main {
     width: 100%;
     background-image: url("../img/mine.jpg");
     overflow-y: scroll;
+    display: none;
+}
+
+.main-2.active {
+    display: block;
 }
 
 .message {
@@ -183,6 +188,7 @@ main {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+    word-wrap: break-word;
 }
 
 .sent {
@@ -199,6 +205,10 @@ main {
 
 .msg-bottom {
     text-align: right;
+}
+
+.chat.active {
+
 }
 
 /* MAIN - 3 */
@@ -232,4 +242,10 @@ main {
 
 .m-p4 {
 flex-basis: 80%;
+}
+
+/* Template */
+
+.template {
+    display: none;
 }
